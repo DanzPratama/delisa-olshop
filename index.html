@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delisa Bouquet</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-red-700 text-white font-sans">
+
+  <!-- Container -->
+  <div class="flex items-center justify-center h-screen">
+    <div class="w-[90%] max-w-sm bg-red-600 rounded-xl p-8 text-center space-y-6 shadow-lg">
+      <h1 class="text-3xl font-bold">DELISA<br>BOUQUET</h1>
+      <div class="flex justify-center">
+        <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center">
+          <div class="bg-red-600 w-8 h-8 rounded-full"></div>
+        </div>
+      </div>
+
+      <!-- Form Login -->
+      <form id="formLogin" class="space-y-4">
+        <input type="email" placeholder="Email" class="w-full p-3 rounded bg-red-800 text-white placeholder-white focus:outline-none"/>
+        <input type="password" placeholder="Password" class="w-full p-3 rounded bg-red-800 text-white placeholder-white focus:outline-none"/>
+        <button type="submit" class="w-full bg-red-700 hover:bg-red-800 py-3 rounded font-semibold">Masuk</button>
+        <div>
+          <a href="#" class="text-yellow-300 text-sm">Lupa password?</a>
+        </div>
+        <div class="text-sm mt-2">
+          Belum punya akun? <a href="#" id="goRegister" class="text-yellow-400 font-bold">Daftar</a>
+        </div>
+      </form>
+
+      <!-- Form Register -->
+      <form id="formRegister" class="space-y-4 hidden">
+        <input type="email" placeholder="Email" class="w-full p-3 rounded bg-red-800 text-white placeholder-white focus:outline-none"/>
+        <input type="tel" placeholder="Nomor telpon" class="w-full p-3 rounded bg-red-800 text-white placeholder-white focus:outline-none"/>
+        <input type="text" placeholder="Nama" class="w-full p-3 rounded bg-red-800 text-white placeholder-white focus:outline-none"/>
+        <button type="submit" class="w-full bg-red-700 hover:bg-red-800 py-3 rounded font-semibold">Buat Akun</button>
+        <div class="text-sm mt-2">
+          Sudah punya akun? <a href="#" id="goLogin" class="text-yellow-400 font-bold">Masuk</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script>
+    $(document).ready(function () {
+      $('#goRegister').click(function (e) {
+        e.preventDefault();
+        $('#formLogin').hide();
+        $('#formRegister').fadeIn();
+      });
+
+      $('#goLogin').click(function (e) {
+        e.preventDefault();
+        $('#formRegister').hide();
+        $('#formLogin').fadeIn();
+      });
+    });
+
+     $(document).ready(function () {
+    $('#formLogin').on('submit', function (e) {
+      e.preventDefault(); // Mencegah reload halaman
+
+      // Validasi sederhana bisa ditambahkan di sini jika perlu
+      // Misalnya cek jika field tidak kosong
+
+      // Arahkan ke dashboard.html
+      window.location.href = 'dashboard.html';
+    });
+  });
+  </script>
+</body>
+</html>

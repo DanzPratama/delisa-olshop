@@ -15,7 +15,7 @@
   <h1 class="text-xl font-bold">Delisa Bouquet</h1>
   <div class="text-center">
     <h2 class="text-6xl font-extrabold">FLASH SALE</h2>
-    <button class="bg-white text-red-600 font-bold px-6 py-2 rounded-full mt-3 shadow-md hover:scale-105 transition">
+    <button id="shopNowBtn" class="bg-white text-red-600 font-bold px-6 py-2 rounded-full mt-3 shadow-md hover:scale-105 transition">
       Shop Now
     </button>
   </div>
@@ -25,21 +25,24 @@
     <h2 class="text-lg font-semibold">Featured Bouquets</h2>
     <div class="flex overflow-x-auto gap-4 mt-3 pb-2">
       <!-- Buket Boneka -->
-      <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2">
+      <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2 featured-item cursor-pointer"
+           data-name="Buket Boneka" data-price="65000" data-img="assets/4.-Buket-Boneka.webp" data-desc="Buket boneka lucu, cocok untuk hadiah.">
         <img src="assets/4.-Buket-Boneka.webp" alt="Buket Boneka" class="rounded-lg mx-auto w-full h-auto" />
         <div class="mt-1 text-sm font-medium">Boneka</div>
         <div class="text-white text-xs">Rp65.000</div>
       </div>
 
       <!-- Buket Permen -->
-      <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2">
+      <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2 featured-item cursor-pointer"
+           data-name="Buket Permen" data-price="85000" data-img="assets/2.-Buket-Permen-dan-Cokelat.webp" data-desc="Buket permen & cokelat manis.">
         <img src="assets/2.-Buket-Permen-dan-Cokelat.webp" alt="Buket Permen" class="rounded-lg mx-auto w-full h-auto" />
         <div class="mt-1 text-sm font-medium">Permen</div>
         <div class="text-white text-xs">Rp85.000</div>
       </div>
 
       <!-- Buket Uang -->
-      <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2">
+      <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2 featured-item cursor-pointer"
+           data-name="Buket Uang" data-price="105000" data-img="assets/1.-Buket-Uang.webp" data-desc="Buket isi uang, elegan untuk ulang tahun.">
         <img src="assets/1.-Buket-Uang.webp" alt="Buket Uang" class="rounded-lg mx-auto w-full h-auto" />
         <div class="mt-1 text-sm font-medium">Uang</div>
         <div class="text-white text-xs">Rp105.000</div>
@@ -52,36 +55,41 @@
   <!-- PRODUK -->
   <div id="produkPage" class="hidden p-4">
     <div class="flex items-center mb-4">
-      <span class="text-2xl mr-2">🔙</span>
+      <button id="backToDashboard" class="text-2xl mr-2">🔙</button>
       <div class="flex items-center bg-pink-600 rounded-full px-4 py-2 flex-1">
         <span class="mr-2">🔍</span>
-        <input type="text" placeholder="Bouquet" class="bg-transparent outline-none placeholder-white w-full text-white"/>
+        <input id="searchProduk" type="text" placeholder="Bouquet" class="bg-transparent outline-none placeholder-white w-full text-white"/>
       </div>
     </div>
-    <div class="grid grid-cols-2 gap-4">
-      <div class="bg-pink-600 rounded-xl p-2">
+    <div class="grid grid-cols-2 gap-4" id="produkGrid">
+      <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
+           data-name="Buket Uang" data-price="65000" data-img="assets/1.-Buket-Uang.webp" data-desc="Buket isi uang, elegan.">
         <img src="assets/1.-Buket-Uang.webp" class="rounded-lg mx-auto w-[200px]">
         <h2 class="font-semibold text-sm mt-2">Buket Uang</h2>
         <p class="text-yellow-300 text-xs">Rp65.000 - 350.000</p>
       </div>
 
-      <div class="bg-pink-600 rounded-xl p-2">
+      <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
+           data-name="Buket Boneka" data-price="48000" data-img="assets/4.-Buket-Boneka.webp" data-desc="Buket boneka cute.">
         <img src="assets/4.-Buket-Boneka.webp" class="rounded-lg mx-auto w-[200px]">
         <h2 class="font-semibold text-sm mt-2">Buket Boneka</h2>
         <p class="text-yellow-300 text-xs">Rp48.000 - 400.000</p>
       </div>
       
-      <div class="bg-pink-600 rounded-xl p-2">
+      <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
+           data-name="Buket ATK" data-price="43000" data-img="assets/6.-Buket-ATK.webp" data-desc="Buket ATK lengkap.">
         <img src="assets/6.-Buket-ATK.webp" class="rounded-lg mx-auto w-[200px]">
         <h2 class="font-semibold text-sm mt-2">Buket ATK</h2>
         <p class="text-yellow-300 text-xs">Rp43.000 - 330.000</p>
       </div>
-      <div class="bg-pink-600 rounded-xl p-2">
+      <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
+           data-name="Buket Buah" data-price="50000" data-img="assets/7.-Buket-Buah.webp" data-desc="Buket buah segar.">
         <img src="assets/7.-Buket-Buah.webp" class="rounded-lg mx-auto w-[200px]">
         <h2 class="font-semibold text-sm mt-2">Buket Buah</h2>
         <p class="text-yellow-300 text-xs">Rp50.000 - 300.000</p>
       </div>
-      <div class="bg-pink-600 rounded-xl p-2">
+      <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
+           data-name="Buket Balon" data-price="55000" data-img="assets/8.-Buket-Balon.webp" data-desc="Buket balon lucu.">
         <img src="assets/8.-Buket-Balon.webp" class="rounded-lg mx-auto w-[200px]">
         <h2 class="font-semibold text-sm mt-2">Buket Balon</h2>
         <p class="text-yellow-300 text-xs">Rp55.000 - 340.000</p>
@@ -92,19 +100,19 @@
   <!-- PROMO -->
   <div id="promoPage" class="hidden p-4">
     <h1 class="text-xl font-bold mb-4">PROMO KUPON</h1>
-    <div class="bg-red-500 rounded-lg p-4 mb-4">
+    <div class="bg-red-500 rounded-lg p-4 mb-4 promo-card" data-code="YADA20" data-discount="20">
       <div class="flex justify-between items-center">
         <div class="text-3xl font-bold">20%</div>
-        <button class="bg-yellow-400 text-red-700 font-bold px-4 py-1 rounded">Gunakan</button>
+        <button class="useVoucher bg-yellow-400 text-red-700 font-bold px-4 py-1 rounded" >Gunakan</button>
       </div>
       <hr class="my-2 border-dashed border-t border-white">
       <div class="text-sm">YADA</div>
       <div class="text-xs mt-1">Berlaku sampai 21 Juli 2025</div>
     </div>
-    <div class="bg-red-500 rounded-lg p-4 mb-4">
+    <div class="bg-red-500 rounded-lg p-4 mb-4 promo-card" data-code="YADA15" data-discount="15">
       <div class="flex justify-between items-center">
         <div class="text-3xl font-bold">15%</div>
-        <button class="bg-yellow-400 text-red-700 font-bold px-4 py-1 rounded">Gunakan</button>
+        <button class="useVoucher bg-yellow-400 text-red-700 font-bold px-4 py-1 rounded" >Gunakan</button>
       </div>
       <hr class="my-2 border-dashed border-t border-white">
       <div class="text-sm">YADA</div>
@@ -126,13 +134,13 @@
     </div>
     <div class="bg-red-500 rounded-lg p-4 space-y-2">
       <p class="font-semibold text-sm text-white">PROFIL</p>
-      <div class="flex justify-between items-center py-2 border-b border-white/20">
+      <div id="btnProfil" class="flex justify-between items-center py-2 border-b border-white/20 cursor-pointer">
         <div class="flex items-center gap-2">
           <span>👤</span> <span>Pengaturan Profil</span>
         </div>
         <span>➡️</span>
       </div>
-      <div class="flex justify-between items-center py-2">
+      <div id="btnUbahAlamat" class="flex justify-between items-center py-2 cursor-pointer">
         <div class="flex items-center gap-2">
           <span>📍</span> <span>Ubah Alamat</span>
         </div>
@@ -141,13 +149,13 @@
     </div>
     <div class="bg-red-500 rounded-lg p-4 space-y-2">
       <p class="font-semibold text-sm text-white">KEAMANAN</p>
-      <div class="flex justify-between items-center py-2 border-b border-white/20">
+      <div id="btnUbahPassword" class="flex justify-between items-center py-2 border-b border-white/20 cursor-pointer">
         <div class="flex items-center gap-2">
           <span>🔒</span> <span>Ubah Password</span>
         </div>
         <span>➡️</span>
       </div>
-      <div class="flex justify-between items-center py-2">
+      <div id="btnUbahNomor" class="flex justify-between items-center py-2 cursor-pointer">
         <div class="flex items-center gap-2">
           <span>📞</span> <span>Ubah Nomor</span>
         </div>
@@ -157,37 +165,32 @@
     <a href="index.html"><button class="w-full bg-orange-500 text-white font-bold py-2 rounded-lg">KELUAR</button></a>
   </div>
 
- <!-- KERANJANG -->
+ <!-- KERANJANG (DINAMIS) -->
 <div id="keranjangPage" class="hidden p-4 space-y-4">
   <h1 class="text-xl font-bold mb-4">Keranjang Saya</h1>
 
-  <div class="bg-white/10 p-4 rounded-xl flex items-center space-x-4">
-    <img src="assets/1.-Buket-Uang.webp" alt="Bouquet" class="w-20 h-20 rounded-lg" />
-    <div class="flex-1">
-      <div class="flex justify-between items-center">
-        <p class="font-semibold">Bouquet</p>
-        <p class="text-sm">Rp47.000</p>
-      </div>
-      <div class="flex items-center mt-2 space-x-2">
-        <button class="bg-white text-red-600 font-bold w-6 h-6 rounded-full text-center leading-5 decrement">−</button>
-        <span class="text-lg font-semibold quantity">1</span>
-        <button class="bg-white text-red-600 font-bold w-6 h-6 rounded-full text-center leading-5 increment">+</button>
-      </div>
-    </div>
+  <div id="cartList" class="space-y-3">
+    <!-- items injected here -->
   </div>
 
   <div class="flex justify-between text-lg font-semibold">
+    <span>Subtotal</span>
+    <span id="subtotalSpan">Rp0</span>
+  </div>
+
+  <div id="appliedPromoCart" class="hidden text-sm">
+    Promo terpakai: <span id="appliedPromoCodeCart"></span> — Diskon: <span id="appliedPromoPercentCart"></span>%
+  </div>
+
+  <div class="flex justify-between text-xl font-bold">
     <span>Total</span>
-    <span id="totalHargaKeranjang">Rp47.000</span>
+    <span id="totalHargaKeranjang">Rp0</span>
   </div>
 
   <button id="toCheckoutPage" class="w-full bg-orange-400 text-white font-bold py-3 rounded-xl">
     Checkout
   </button>
 </div>
-
-
-
 
 <!-- CHECKOUT -->
 <div id="checkoutPage" class="hidden p-4 space-y-4">
@@ -199,24 +202,21 @@
     <p>Jl. Kaliurang 7 Blok17 No.3<br>Sleman, Daerah Istimewa Yogyakarta</p>
   </div>
 
-  <!-- Produk -->
-  <div class="bg-white/10 p-4 rounded-xl flex items-center space-x-4">
-    <img src="assets/1.-Buket-Uang.webp" alt="Bouquet" class="w-20 h-20 rounded-lg" />
-    <div class="flex-1">
-      <div class="flex justify-between">
-        <p class="font-semibold">Bouquet</p>
-        <p>Rp47.000</p>
-      </div>
-    </div>
-  </div>
+  <!-- Produk (ringkasan) -->
+  <div id="checkoutItems" class="space-y-2"></div>
 
   <!-- Promo -->
-  <button class="w-full bg-white/10 p-3 rounded-xl text-center text-white">Masukkan Promo</button>
+  <button id="openPromoFromCheckout" class="w-full bg-white/10 p-3 rounded-xl text-center text-white">Masukkan Promo</button>
+
+  <!-- Promo terpakai -->
+  <div id="appliedPromo" class="hidden text-sm bg-white/10 p-3 rounded">
+    Promo digunakan: <span id="appliedPromoCode"></span> — Diskon: <span id="appliedPromoPercent"></span>%
+  </div>
 
   <!-- Total -->
   <div class="flex justify-between text-lg font-semibold">
     <span>Total</span>
-    <span id="totalHargaCheckout">Rp47.000</span>
+    <span id="totalHargaCheckout">Rp0</span>
   </div>
 
   <button id="toPaymentPage" class="w-full bg-orange-400 text-white font-bold py-3 rounded-xl">
@@ -231,7 +231,7 @@
   <div class="bg-white/10 p-4 rounded-xl">
     <div class="flex justify-between font-semibold text-lg">
       <span>Total Pembayaran</span>
-      <span>Rp47.000</span>
+      <span id="totalPembayaranSpan">Rp0</span>
     </div>
   </div>
 
@@ -240,7 +240,7 @@
          alt="BCA" class="h-8" />
     <p class="text-sm font-semibold">Nomor virtual account</p>
     <div class="flex justify-between items-center">
-      <p class="text-red-500 font-bold text-lg">987789091763816398</p>
+      <p id="vaNumber" class="text-red-500 font-bold text-lg">987789091763816398</p>
       <button id="copyVA" class="bg-white text-red-600 font-bold px-3 py-1 rounded">Copy</button>
     </div>
   </div>
@@ -255,12 +255,44 @@
   class="fixed bottom-20 right-4 bg-white text-red-600 shadow-xl p-3 rounded-full text-xl z-50 hover:scale-110 transition">
   🛒
    <span id="cartBadge"
-    class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">1</span>
+    class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
 </button>
 
+<!-- MODAL DETAIL PRODUK -->
+<div id="productModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl p-4 text-black w-11/12 max-w-md">
+    <div class="flex justify-between items-start">
+      <h3 id="modalName" class="text-lg font-bold"></h3>
+      <button id="closeModal" class="text-sm">✖</button>
+    </div>
+    <div class="mt-3 flex gap-4">
+      <img id="modalImg" src="" alt="img" class="w-32 h-32 object-cover rounded-lg">
+      <div class="flex-1">
+        <p id="modalDesc" class="text-sm text-gray-700"></p>
+        <div class="mt-3">
+          <div class="text-sm">Harga satuan:</div>
+          <div id="modalPrice" class="text-lg font-bold mt-1">Rp0</div>
+        </div>
+        <div class="mt-3 flex items-center gap-2">
+          <button id="modalDecr" class="bg-red-600 text-white rounded-full w-8 h-8">−</button>
+          <span id="modalQty" class="font-bold">1</span>
+          <button id="modalIncr" class="bg-red-600 text-white rounded-full w-8 h-8">+</button>
+        </div>
+        <div class="mt-3">
+          <div class="text-sm">Subtotal:</div>
+          <div id="modalSubtotal" class="text-lg font-semibold">Rp0</div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 flex gap-2">
+      <button id="addToCartFromModal" class="flex-1 bg-orange-400 text-white font-bold py-2 rounded-xl">Tambah ke Keranjang</button>
+      <button id="buyNowModal" class="flex-1 bg-red-600 text-white font-bold py-2 rounded-xl">Beli Sekarang</button>
+    </div>
+  </div>
+</div>
 
   <!-- NAVIGASI PUTIH -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white text-red-600 flex justify-around py-3 text-xs font-semibold border-t border-red-200 z-50">
+  <div class="fixed bottom-0 left-0 right-0 bg-white text-red-600 flex justify-around py-3 text-xs font-semibold border-t border-red-200 z-40">
     <button id="navDashboard" class="flex flex-col items-center">
       <span>🏠</span>Home
     </button>
@@ -279,63 +311,284 @@
   <!-- SCRIPT -->
 <script>
 $(document).ready(function () {
+  const pages = "#dashboardPage, #promoPage, #produkPage, #pengaturanPage, #keranjangPage, #checkoutPage, #paymentPage";
+  let cart = { items: [], subtotal: 0 };
+  let appliedPromo = null;
+  let modalState = { name: "", price: 0, img: "", desc: "", qty: 1 };
+
   function showPage(pageId) {
-    $("#dashboardPage, #promoPage, #produkPage, #pengaturanPage, #keranjangPage, #checkoutPage, #paymentPage").hide();
+    $(pages).hide();
     $(pageId).fadeIn();
     toggleFloatingCart(!(pageId === "#checkoutPage" || pageId === "#paymentPage"));
   }
 
   function toggleFloatingCart(show = true) {
-    if (show) {
-      $("#floatingCartBtn").fadeIn();
-    } else {
-      $("#floatingCartBtn").fadeOut();
-    }
+    if (show) $("#floatingCartBtn").fadeIn(); else $("#floatingCartBtn").fadeOut();
   }
 
-  // Navigasi
+  // Navigation bindings
   $("#floatingCartBtn").click(() => showPage("#keranjangPage"));
   $("#toCheckoutPage").click(() => showPage("#checkoutPage"));
-  $("#toPaymentPage").click(() => showPage("#paymentPage"));
+  $("#toPaymentPage").click(() => {
+    updateTotalsDisplay();
+    showPage("#paymentPage");
+  });
   $("#backHome").click(() => showPage("#dashboardPage"));
 
-  // Tambahan Navigasi Utama
   $("#navDashboard").click(() => showPage("#dashboardPage"));
   $("#navProduk").click(() => showPage("#produkPage"));
   $("#navPromo").click(() => showPage("#promoPage"));
   $("#navPengaturan").click(() => showPage("#pengaturanPage"));
 
-  // Total dan Quantity
-  let quantity = 1;
-  const pricePerItem = 47000;
-
-  function updateTotal() {
-    const total = quantity * pricePerItem;
-    $(".quantity").text(quantity);
-    $("#totalHargaKeranjang, #totalHargaCheckout").text("Rp" + total.toLocaleString("id-ID"));
-  }
-
-  $(".increment").click(function () {
-    quantity++;
-    updateTotal();
+  // Shop Now -> Produk
+  $("#shopNowBtn").click(() => {
+    showPage("#produkPage");
+    $("#produkGrid")[0].scrollIntoView({ behavior: "smooth" });
   });
 
-  $(".decrement").click(function () {
-    if (quantity > 1) {
-      quantity--;
-      updateTotal();
+  // Open modal when clicking product or featured
+  $(document).on("click", ".product-card, .featured-item", function () {
+    const name = $(this).data("name");
+    const price = parseInt($(this).data("price"), 10);
+    const img = $(this).data("img");
+    const desc = $(this).data("desc") || "";
+    openProductModal({ name, price, img, desc });
+  });
+
+  $("#backToDashboard").click(() => showPage("#dashboardPage"));
+
+  // Modal handlers
+  function openProductModal(p) {
+    modalState = { name: p.name, price: p.price, img: p.img, desc: p.desc, qty: 1 };
+    $("#modalName").text(modalState.name);
+    $("#modalImg").attr("src", modalState.img);
+    $("#modalDesc").text(modalState.desc);
+    $("#modalPrice").text(formatRupiah(modalState.price));
+    $("#modalQty").text(modalState.qty);
+    $("#modalSubtotal").text(formatRupiah(modalState.price * modalState.qty));
+    $("#productModal").fadeIn().css("display", "flex");
+  }
+  $("#closeModal").click(() => $("#productModal").fadeOut());
+  $("#modalIncr").click(() => {
+    modalState.qty++;
+    $("#modalQty").text(modalState.qty);
+    $("#modalSubtotal").text(formatRupiah(modalState.price * modalState.qty));
+  });
+  $("#modalDecr").click(() => {
+    if (modalState.qty > 1) modalState.qty--;
+    $("#modalQty").text(modalState.qty);
+    $("#modalSubtotal").text(formatRupiah(modalState.price * modalState.qty));
+  });
+
+  // Add to cart from modal
+  $("#addToCartFromModal").click(() => {
+    addToCart({ name: modalState.name, price: modalState.price, qty: modalState.qty, img: modalState.img });
+    $("#productModal").fadeOut();
+    showPage("#keranjangPage");
+  });
+
+  // Buy now from modal: add and go to checkout
+  $("#buyNowModal").click(() => {
+    addToCart({ name: modalState.name, price: modalState.price, qty: modalState.qty, img: modalState.img });
+    $("#productModal").fadeOut();
+    showPage("#checkoutPage");
+  });
+
+  // Cart rendering and controls
+  function addToCart(item) {
+    // merge if same product
+    const idx = cart.items.findIndex(i => i.name === item.name);
+    if (idx === -1) {
+      cart.items.push({ name: item.name, price: item.price, quantity: item.qty || 1, img: item.img || "" });
+    } else {
+      cart.items[idx].quantity += item.qty || 1;
+    }
+    recalcCart();
+    renderCart();
+  }
+
+  function recalcCart() {
+    cart.subtotal = cart.items.reduce((s, it) => s + it.price * it.quantity, 0);
+  }
+
+  function renderCart() {
+    $("#cartList").empty();
+    if (cart.items.length === 0) {
+      $("#cartList").append('<div class="text-sm text-white/80">Keranjang kosong</div>');
+    } else {
+      cart.items.forEach((it, idx) => {
+        const itemHtml = `
+          <div class="bg-white/10 p-3 rounded-xl flex items-center gap-3" data-idx="${idx}">
+            <img src="${it.img || 'assets/1.-Buket-Uang.webp'}" class="w-16 h-16 rounded-lg object-cover">
+            <div class="flex-1">
+              <div class="flex justify-between items-center">
+                <p class="font-semibold item-name">${it.name}</p>
+                <p class="text-sm item-line-total">${formatRupiah(it.price * it.quantity)}</p>
+              </div>
+              <div class="flex items-center mt-2 gap-2">
+                <button class="decr-item bg-white text-red-600 font-bold w-6 h-6 rounded-full text-center leading-5">−</button>
+                <span class="text-lg font-semibold item-qty">${it.quantity}</span>
+                <button class="incr-item bg-white text-red-600 font-bold w-6 h-6 rounded-full text-center leading-5">+</button>
+                <div class="ml-3 text-xs text-white/80">Rp${(it.price).toLocaleString('id-ID')}/pcs</div>
+                <button class="ml-auto text-xs underline remove-item">Hapus</button>
+              </div>
+            </div>
+          </div>
+        `;
+        $("#cartList").append(itemHtml);
+      });
+    }
+    $("#cartBadge").text(cart.items.reduce((s, it) => s + it.quantity, 0));
+    $("#subtotalSpan").text(formatRupiah(cart.subtotal));
+    updateTotalsDisplay();
+    renderCheckoutSummary();
+  }
+
+  // increment/decrement/remove item handlers (delegated)
+  $(document).on("click", ".incr-item", function () {
+    const idx = $(this).closest("[data-idx]").data("idx");
+    cart.items[idx].quantity++;
+    recalcCart();
+    renderCart();
+  });
+  $(document).on("click", ".decr-item", function () {
+    const idx = $(this).closest("[data-idx]").data("idx");
+    if (cart.items[idx].quantity > 1) cart.items[idx].quantity--;
+    else {
+      // remove if 1 -> 0
+      cart.items.splice(idx, 1);
+    }
+    recalcCart();
+    renderCart();
+  });
+  $(document).on("click", ".remove-item", function () {
+    const idx = $(this).closest("[data-idx]").data("idx");
+    cart.items.splice(idx, 1);
+    recalcCart();
+    renderCart();
+  });
+
+  // Open Promo from Checkout
+  $("#openPromoFromCheckout").click(() => {
+    showPage("#promoPage");
+  });
+
+  // Use voucher button in promo page
+  $(document).on("click", ".useVoucher", function () {
+    const parent = $(this).closest(".promo-card");
+    const code = parent.data("code");
+    const percent = parseInt(parent.data("discount"), 10);
+    appliedPromo = { code, percent };
+    updateTotalsDisplay();
+    $("#appliedPromoCode").text(code);
+    $("#appliedPromoPercent").text(percent);
+    $("#appliedPromo").show();
+    // reflect in cart page too
+    $("#appliedPromoCart").show();
+    $("#appliedPromoCodeCart").text(code);
+    $("#appliedPromoPercentCart").text(percent);
+    showPage("#checkoutPage");
+  });
+
+  // Copy VA
+  $("#copyVA").click(function () {
+    const va = $("#vaNumber").text().trim();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(va).then(() => { alert("Nomor Virtual Account berhasil disalin!"); });
+    } else {
+      const $temp = $("<input>");
+      $("body").append($temp);
+      $temp.val(va).select();
+      document.execCommand("copy");
+      $temp.remove();
+      alert("Nomor Virtual Account berhasil disalin!");
     }
   });
 
-  $("#copyVA").click(function () {
-    const va = "987789091763816398";
-    navigator.clipboard.writeText(va);
-    alert("Nomor Virtual Account berhasil disalin!");
+  // Pengaturan placeholders
+  $("#btnProfil").click(() => alert("Fungsi Pengaturan Profil belum diimplementasikan (frontend placeholder)."));
+  $("#btnUbahAlamat").click(() => alert("Fungsi Ubah Alamat belum diimplementasikan (frontend placeholder)."));
+  $("#btnUbahPassword").click(() => alert("Fungsi Ubah Password belum diimplementasikan (frontend placeholder)."));
+  $("#btnUbahNomor").click(() => alert("Fungsi Ubah Nomor belum diimplementasikan (frontend placeholder)."));
+
+  // Simple search — filter produk by name
+  $("#searchProduk").on("input", function () {
+    const q = $(this).val().toLowerCase();
+    $("#produkGrid .product-card").each(function () {
+      const name = $(this).data("name").toString().toLowerCase();
+      if (name.indexOf(q) !== -1) $(this).show(); else $(this).hide();
+    });
   });
 
-  updateTotal();
+  // Checkout summary render
+  function renderCheckoutSummary() {
+    $("#checkoutItems").empty();
+    if (cart.items.length === 0) {
+      $("#checkoutItems").append('<div class="text-sm text-white/80">Tidak ada produk</div>');
+    } else {
+      cart.items.forEach(it => {
+        $("#checkoutItems").append(`
+          <div class="bg-white/10 p-3 rounded-xl flex justify-between items-center">
+            <div>
+              <div class="font-semibold">${it.name} x${it.quantity}</div>
+              <div class="text-sm text-white/80">Rp${(it.price).toLocaleString('id-ID')} / pcs</div>
+            </div>
+            <div class="font-semibold">${formatRupiah(it.price * it.quantity)}</div>
+          </div>
+        `);
+      });
+    }
+    $("#totalHargaCheckout").text(formatRupiah(calculateTotal()));
+  }
+
+  function calculateTotal() {
+    let total = cart.subtotal;
+    if (appliedPromo && appliedPromo.percent) {
+      const disc = Math.round((appliedPromo.percent / 100) * total);
+      total = total - disc;
+    }
+    return total;
+  }
+
+  function updateTotalsDisplay() {
+    $("#subtotalSpan").text(formatRupiah(cart.subtotal));
+    const total = calculateTotal();
+    $("#totalHargaKeranjang").text(formatRupiah(total));
+    $("#totalHargaCheckout").text(formatRupiah(total));
+    $("#totalPembayaranSpan").text(formatRupiah(total));
+    if (appliedPromo) {
+      $("#appliedPromoCart").show();
+      $("#appliedPromoCodeCart").text(appliedPromo.code);
+      $("#appliedPromoPercentCart").text(appliedPromo.percent);
+      $("#appliedPromo").show();
+      $("#appliedPromoCode").text(appliedPromo.code);
+      $("#appliedPromoPercent").text(appliedPromo.percent);
+    } else {
+      $("#appliedPromoCart, #appliedPromo").hide();
+    }
+  }
+
+  function formatRupiah(n) {
+    if (n === 0) return "Rp0";
+    return "Rp" + n.toLocaleString("id-ID");
+  }
+
+  // Init demo products into cart (optional) - keep empty initial for realistic behavior
+  // Example: addToCart({name:"Bouquet", price:47000, qty:1, img:"assets/1.-Buket-Uang.webp"});
+
+  // Start page
+  renderCart();
+  showPage("#dashboardPage");
 });
 </script>
+<!-- WATERMARK DEMO -->
+<div id="watermarkDemo" 
+     class="fixed inset-0 flex items-center justify-center select-none pointer-events-none z-[9999]"
+     style="opacity:0.12;">
+  <h1 class="text-[80px] md:text-[120px] font-extrabold text-white tracking-widest rotate-[-25deg]">
+    DEMO
+  </h1>
+</div>
 
 
 </body>

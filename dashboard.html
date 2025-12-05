@@ -11,7 +11,6 @@
 
  <!-- DASHBOARD -->
 <div id="dashboardPage" class="p-4 space-y-6">
-  <!-- Judul dan Banner -->
   <h1 class="text-xl font-bold">Delisa Bouquet</h1>
   <div class="text-center">
     <h2 class="text-6xl font-extrabold">FLASH SALE</h2>
@@ -20,11 +19,9 @@
     </button>
   </div>
 
-  <!-- Featured Section -->
   <div>
     <h2 class="text-lg font-semibold">Featured Bouquets</h2>
     <div class="flex overflow-x-auto gap-4 mt-3 pb-2">
-      <!-- Buket Boneka -->
       <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2 featured-item cursor-pointer"
            data-name="Buket Boneka" data-price="65000" data-img="assets/4.-Buket-Boneka.webp" data-desc="Buket boneka lucu, cocok untuk hadiah.">
         <img src="assets/4.-Buket-Boneka.webp" alt="Buket Boneka" class="rounded-lg mx-auto w-full h-auto" />
@@ -32,7 +29,6 @@
         <div class="text-white text-xs">Rp65.000</div>
       </div>
 
-      <!-- Buket Permen -->
       <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2 featured-item cursor-pointer"
            data-name="Buket Permen" data-price="85000" data-img="assets/2.-Buket-Permen-dan-Cokelat.webp" data-desc="Buket permen & cokelat manis.">
         <img src="assets/2.-Buket-Permen-dan-Cokelat.webp" alt="Buket Permen" class="rounded-lg mx-auto w-full h-auto" />
@@ -40,7 +36,6 @@
         <div class="text-white text-xs">Rp85.000</div>
       </div>
 
-      <!-- Buket Uang -->
       <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2 featured-item cursor-pointer"
            data-name="Buket Uang" data-price="105000" data-img="assets/1.-Buket-Uang.webp" data-desc="Buket isi uang, elegan untuk ulang tahun.">
         <img src="assets/1.-Buket-Uang.webp" alt="Buket Uang" class="rounded-lg mx-auto w-full h-auto" />
@@ -51,127 +46,105 @@
   </div>
 </div>
 
-
-  <!-- PRODUK -->
-  <div id="produkPage" class="hidden p-4">
-    <div class="flex items-center mb-4">
-      <button id="backToDashboard" class="text-2xl mr-2">🔙</button>
-      <div class="flex items-center bg-pink-600 rounded-full px-4 py-2 flex-1">
-        <span class="mr-2">🔍</span>
-        <input id="searchProduk" type="text" placeholder="Bouquet" class="bg-transparent outline-none placeholder-white w-full text-white"/>
-      </div>
-    </div>
-    <div class="grid grid-cols-2 gap-4" id="produkGrid">
-      <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
-           data-name="Buket Uang" data-price="65000" data-img="assets/1.-Buket-Uang.webp" data-desc="Buket isi uang, elegan.">
-        <img src="assets/1.-Buket-Uang.webp" class="rounded-lg mx-auto w-[200px]">
-        <h2 class="font-semibold text-sm mt-2">Buket Uang</h2>
-        <p class="text-yellow-300 text-xs">Rp65.000 - 350.000</p>
-      </div>
-
-      <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
-           data-name="Buket Boneka" data-price="48000" data-img="assets/4.-Buket-Boneka.webp" data-desc="Buket boneka cute.">
-        <img src="assets/4.-Buket-Boneka.webp" class="rounded-lg mx-auto w-[200px]">
-        <h2 class="font-semibold text-sm mt-2">Buket Boneka</h2>
-        <p class="text-yellow-300 text-xs">Rp48.000 - 400.000</p>
-      </div>
-      
-      <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
-           data-name="Buket ATK" data-price="43000" data-img="assets/6.-Buket-ATK.webp" data-desc="Buket ATK lengkap.">
-        <img src="assets/6.-Buket-ATK.webp" class="rounded-lg mx-auto w-[200px]">
-        <h2 class="font-semibold text-sm mt-2">Buket ATK</h2>
-        <p class="text-yellow-300 text-xs">Rp43.000 - 330.000</p>
-      </div>
-      <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
-           data-name="Buket Buah" data-price="50000" data-img="assets/7.-Buket-Buah.webp" data-desc="Buket buah segar.">
-        <img src="assets/7.-Buket-Buah.webp" class="rounded-lg mx-auto w-[200px]">
-        <h2 class="font-semibold text-sm mt-2">Buket Buah</h2>
-        <p class="text-yellow-300 text-xs">Rp50.000 - 300.000</p>
-      </div>
-      <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
-           data-name="Buket Balon" data-price="55000" data-img="assets/8.-Buket-Balon.webp" data-desc="Buket balon lucu.">
-        <img src="assets/8.-Buket-Balon.webp" class="rounded-lg mx-auto w-[200px]">
-        <h2 class="font-semibold text-sm mt-2">Buket Balon</h2>
-        <p class="text-yellow-300 text-xs">Rp55.000 - 340.000</p>
-      </div>
+<!-- PRODUK -->
+<div id="produkPage" class="hidden p-4">
+  <div class="flex items-center mb-4">
+    <button id="backToDashboard" class="text-2xl mr-2">🔙</button>
+    <div class="flex items-center bg-pink-600 rounded-full px-4 py-2 flex-1">
+      <span class="mr-2">🔍</span>
+      <input id="searchProduk" type="text" placeholder="Bouquet" class="bg-transparent outline-none placeholder-white w-full text-white"/>
     </div>
   </div>
-
-  <!-- PROMO -->
-  <div id="promoPage" class="hidden p-4">
-    <h1 class="text-xl font-bold mb-4">PROMO KUPON</h1>
-    <div class="bg-red-500 rounded-lg p-4 mb-4 promo-card" data-code="YADA20" data-discount="20">
-      <div class="flex justify-between items-center">
-        <div class="text-3xl font-bold">20%</div>
-        <button class="useVoucher bg-yellow-400 text-red-700 font-bold px-4 py-1 rounded" >Gunakan</button>
-      </div>
-      <hr class="my-2 border-dashed border-t border-white">
-      <div class="text-sm">YADA</div>
-      <div class="text-xs mt-1">Berlaku sampai 21 Juli 2025</div>
+  <div class="grid grid-cols-2 gap-4" id="produkGrid">
+    <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
+         data-name="Buket Uang" data-price="65000" data-img="assets/1.-Buket-Uang.webp" data-desc="Buket isi uang, elegan.">
+      <img src="assets/1.-Buket-Uang.webp" class="rounded-lg mx-auto w-[200px]">
+      <h2 class="font-semibold text-sm mt-2">Buket Uang</h2>
+      <p class="text-yellow-300 text-xs">Rp65.000 - 350.000</p>
     </div>
-    <div class="bg-red-500 rounded-lg p-4 mb-4 promo-card" data-code="YADA15" data-discount="15">
-      <div class="flex justify-between items-center">
-        <div class="text-3xl font-bold">15%</div>
-        <button class="useVoucher bg-yellow-400 text-red-700 font-bold px-4 py-1 rounded" >Gunakan</button>
-      </div>
-      <hr class="my-2 border-dashed border-t border-white">
-      <div class="text-sm">YADA</div>
-      <div class="text-xs mt-1">Berlaku sampai 21 Juli 2025</div>
+
+    <div class="bg-pink-600 rounded-xl p-2 product-card cursor-pointer"
+         data-name="Buket Boneka" data-price="48000" data-img="assets/4.-Buket-Boneka.webp" data-desc="Buket boneka cute.">
+      <img src="assets/4.-Buket-Boneka.webp" class="rounded-lg mx-auto w-[200px]">
+      <h2 class="font-semibold text-sm mt-2">Buket Boneka</h2>
+      <p class="text-yellow-300 text-xs">Rp48.000 - 400.000</p>
+    </div>
+    <!-- add other products as before -->
+  </div>
+</div>
+
+<!-- PROMO -->
+<div id="promoPage" class="hidden p-4">
+  <h1 class="text-xl font-bold mb-4">PROMO KUPON</h1>
+  <div class="bg-red-500 rounded-lg p-4 mb-4 promo-card" data-code="YADA20" data-discount="20">
+    <div class="flex justify-between items-center">
+      <div class="text-3xl font-bold">20%</div>
+      <button class="useVoucher bg-yellow-400 text-red-700 font-bold px-4 py-1 rounded" >Gunakan</button>
+    </div>
+    <hr class="my-2 border-dashed border-t border-white">
+    <div class="text-sm">YADA</div>
+    <div class="text-xs mt-1">Berlaku sampai 21 Juli 2025</div>
+  </div>
+  <div class="bg-red-500 rounded-lg p-4 mb-4 promo-card" data-code="YADA15" data-discount="15">
+    <div class="flex justify-between items-center">
+      <div class="text-3xl font-bold">15%</div>
+      <button class="useVoucher bg-yellow-400 text-red-700 font-bold px-4 py-1 rounded" >Gunakan</button>
+    </div>
+    <hr class="my-2 border-dashed border-t border-white">
+    <div class="text-sm">YADA</div>
+    <div class="text-xs mt-1">Berlaku sampai 21 Juli 2025</div>
+  </div>
+</div>
+
+<!-- PENGATURAN -->
+<div id="pengaturanPage" class="hidden p-4 space-y-4">
+  <h1 class="text-2xl font-bold">PENGATURAN</h1>
+  <p class="text-sm text-white/80">Lengkapi akun Anda</p>
+  <div class="flex items-center space-x-4 mt-4">
+    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-16 h-16 rounded-full">
+    <div>
+      <p class="font-bold text-white text-lg">Razif Maulana</p>
+      <p class="text-sm text-white/80">08761985162</p>
+      <p class="text-sm text-white/80">sabarsantoso@gmail.com</p>
     </div>
   </div>
-
-  <!-- PENGATURAN -->
-  <div id="pengaturanPage" class="hidden p-4 space-y-4">
-    <h1 class="text-2xl font-bold">PENGATURAN</h1>
-    <p class="text-sm text-white/80">Lengkapi akun Anda</p>
-    <div class="flex items-center space-x-4 mt-4">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-16 h-16 rounded-full">
-      <div>
-        <p class="font-bold text-white text-lg">Razif Maulana</p>
-        <p class="text-sm text-white/80">08761985162</p>
-        <p class="text-sm text-white/80">sabarsantoso@gmail.com</p>
+  <div class="bg-red-500 rounded-lg p-4 space-y-2">
+    <p class="font-semibold text-sm text-white">PROFIL</p>
+    <div id="btnProfil" class="flex justify-between items-center py-2 border-b border-white/20 cursor-pointer">
+      <div class="flex items-center gap-2">
+        <span>👤</span> <span>Pengaturan Profil</span>
       </div>
+      <span>➡️</span>
     </div>
-    <div class="bg-red-500 rounded-lg p-4 space-y-2">
-      <p class="font-semibold text-sm text-white">PROFIL</p>
-      <div id="btnProfil" class="flex justify-between items-center py-2 border-b border-white/20 cursor-pointer">
-        <div class="flex items-center gap-2">
-          <span>👤</span> <span>Pengaturan Profil</span>
-        </div>
-        <span>➡️</span>
+    <div id="btnUbahAlamat" class="flex justify-between items-center py-2 cursor-pointer">
+      <div class="flex items-center gap-2">
+        <span>📍</span> <span>Ubah Alamat</span>
       </div>
-      <div id="btnUbahAlamat" class="flex justify-between items-center py-2 cursor-pointer">
-        <div class="flex items-center gap-2">
-          <span>📍</span> <span>Ubah Alamat</span>
-        </div>
-        <span>➡️</span>
-      </div>
+      <span>➡️</span>
     </div>
-    <div class="bg-red-500 rounded-lg p-4 space-y-2">
-      <p class="font-semibold text-sm text-white">KEAMANAN</p>
-      <div id="btnUbahPassword" class="flex justify-between items-center py-2 border-b border-white/20 cursor-pointer">
-        <div class="flex items-center gap-2">
-          <span>🔒</span> <span>Ubah Password</span>
-        </div>
-        <span>➡️</span>
-      </div>
-      <div id="btnUbahNomor" class="flex justify-between items-center py-2 cursor-pointer">
-        <div class="flex items-center gap-2">
-          <span>📞</span> <span>Ubah Nomor</span>
-        </div>
-        <span>➡️</span>
-      </div>
-    </div>
-    <a href="index.html"><button class="w-full bg-orange-500 text-white font-bold py-2 rounded-lg">KELUAR</button></a>
   </div>
+  <div class="bg-red-500 rounded-lg p-4 space-y-2">
+    <p class="font-semibold text-sm text-white">KEAMANAN</p>
+    <div id="btnUbahPassword" class="flex justify-between items-center py-2 border-b border-white/20 cursor-pointer">
+      <div class="flex items-center gap-2">
+        <span>🔒</span> <span>Ubah Password</span>
+      </div>
+      <span>➡️</span>
+    </div>
+    <div id="btnUbahNomor" class="flex justify-between items-center py-2 cursor-pointer">
+      <div class="flex items-center gap-2">
+        <span>📞</span> <span>Ubah Nomor</span>
+      </div>
+      <span>➡️</span>
+    </div>
+  </div>
+  <a href="index.html"><button class="w-full bg-orange-500 text-white font-bold py-2 rounded-lg">KELUAR</button></a>
+</div>
 
- <!-- KERANJANG (DINAMIS) -->
+<!-- KERANJANG -->
 <div id="keranjangPage" class="hidden p-4 space-y-4">
   <h1 class="text-xl font-bold mb-4">Keranjang Saya</h1>
-
-  <div id="cartList" class="space-y-3">
-    <!-- items injected here -->
-  </div>
+  <div id="cartList" class="space-y-3"></div>
 
   <div class="flex justify-between text-lg font-semibold">
     <span>Subtotal</span>
@@ -196,24 +169,19 @@
 <div id="checkoutPage" class="hidden p-4 space-y-4">
   <h1 class="text-xl font-bold mb-4">Periksa</h1>
 
-  <!-- Alamat -->
   <div class="bg-white/10 p-4 rounded-xl text-sm">
     <p class="font-semibold">Alamat:</p>
     <p>Jl. Kaliurang 7 Blok17 No.3<br>Sleman, Daerah Istimewa Yogyakarta</p>
   </div>
 
-  <!-- Produk (ringkasan) -->
   <div id="checkoutItems" class="space-y-2"></div>
 
-  <!-- Promo -->
   <button id="openPromoFromCheckout" class="w-full bg-white/10 p-3 rounded-xl text-center text-white">Masukkan Promo</button>
 
-  <!-- Promo terpakai -->
   <div id="appliedPromo" class="hidden text-sm bg-white/10 p-3 rounded">
     Promo digunakan: <span id="appliedPromoCode"></span> — Diskon: <span id="appliedPromoPercent"></span>%
   </div>
 
-  <!-- Total -->
   <div class="flex justify-between text-lg font-semibold">
     <span>Total</span>
     <span id="totalHargaCheckout">Rp0</span>
@@ -245,7 +213,39 @@
     </div>
   </div>
 
-  <button id="backHome" class="w-full bg-white text-red-600 font-bold py-3 rounded-xl mt-4">
+  <div class="flex gap-2">
+    <button id="processPaymentBtn" class="flex-1 bg-green-500 text-white font-bold py-3 rounded-xl">Proses</button>
+    <button id="backHomeFromPayment" class="flex-1 bg-white text-red-600 font-bold py-3 rounded-xl">Batal</button>
+  </div>
+</div>
+
+<!-- ORDER DETAIL (SETELAH PROSES) -->
+<div id="orderDetailPage" class="hidden p-4 space-y-4">
+  <h1 class="text-xl font-bold mb-2">Detail Pesanan</h1>
+
+  <div id="orderStatus" class="bg-white/10 p-4 rounded-xl">
+    <div class="font-semibold">Status:</div>
+    <div id="orderStatusText" class="text-green-300 font-bold">Pembayaran berhasil (Demo)</div>
+  </div>
+
+  <div id="orderSummary" class="bg-white/10 p-4 rounded-xl space-y-2">
+    <!-- isi detail pesanan -->
+  </div>
+
+  <div class="bg-white/10 p-4 rounded-xl">
+    <div class="flex justify-between items-center">
+      <div>
+        <div class="text-sm">Virtual Account</div>
+        <div id="orderVANumber" class="font-bold text-red-500">987789091763816398</div>
+      </div>
+      <div class="text-right">
+        <div class="text-sm">Total Bayar</div>
+        <div id="orderTotal" class="font-bold text-lg">Rp0</div>
+      </div>
+    </div>
+  </div>
+
+  <button id="orderBackHome" class="w-full bg-orange-400 text-white font-bold py-3 rounded-xl">
     Kembali ke Beranda
   </button>
 </div>
@@ -291,27 +291,36 @@
   </div>
 </div>
 
-  <!-- NAVIGASI PUTIH -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white text-red-600 flex justify-around py-3 text-xs font-semibold border-t border-red-200 z-40">
-    <button id="navDashboard" class="flex flex-col items-center">
-      <span>🏠</span>Home
-    </button>
-    <button id="navProduk" class="flex flex-col items-center">
-      <span>🔲</span>Produk
-    </button>
-    <button id="navPromo" class="flex flex-col items-center">
-      <span>🎁</span>Promo
-    </button>
+<!-- NAVIGASI PUTIH -->
+<div class="fixed bottom-0 left-0 right-0 bg-white text-red-600 flex justify-around py-3 text-xs font-semibold border-t border-red-200 z-40">
+  <button id="navDashboard" class="flex flex-col items-center">
+    <span>🏠</span>Home
+  </button>
+  <button id="navProduk" class="flex flex-col items-center">
+    <span>🔲</span>Produk
+  </button>
+  <button id="navPromo" class="flex flex-col items-center">
+    <span>🎁</span>Promo
+  </button>
 
-    <button id="navPengaturan" class="flex flex-col items-center">
-      <span>👤</span>Pengaturan
-    </button>
-  </div>
+  <button id="navPengaturan" class="flex flex-col items-center">
+    <span>👤</span>Pengaturan
+  </button>
+</div>
 
-  <!-- SCRIPT -->
+<!-- WATERMARK DEMO -->
+<!-- <div id="watermarkDemo" 
+     class="fixed inset-0 flex items-center justify-center select-none pointer-events-none z-[9999]"
+     style="opacity:0.12;">
+  <h1 class="text-[80px] md:text-[120px] font-extrabold text-white tracking-widest rotate-[-25deg]">
+    DEMO
+  </h1>
+</div> -->
+
+<!-- SCRIPT -->
 <script>
 $(document).ready(function () {
-  const pages = "#dashboardPage, #promoPage, #produkPage, #pengaturanPage, #keranjangPage, #checkoutPage, #paymentPage";
+  const pages = "#dashboardPage, #promoPage, #produkPage, #pengaturanPage, #keranjangPage, #checkoutPage, #paymentPage, #orderDetailPage";
   let cart = { items: [], subtotal: 0 };
   let appliedPromo = null;
   let modalState = { name: "", price: 0, img: "", desc: "", qty: 1 };
@@ -319,7 +328,7 @@ $(document).ready(function () {
   function showPage(pageId) {
     $(pages).hide();
     $(pageId).fadeIn();
-    toggleFloatingCart(!(pageId === "#checkoutPage" || pageId === "#paymentPage"));
+    toggleFloatingCart(!(pageId === "#checkoutPage" || pageId === "#paymentPage" || pageId === "#orderDetailPage"));
   }
 
   function toggleFloatingCart(show = true) {
@@ -396,7 +405,6 @@ $(document).ready(function () {
 
   // Cart rendering and controls
   function addToCart(item) {
-    // merge if same product
     const idx = cart.items.findIndex(i => i.name === item.name);
     if (idx === -1) {
       cart.items.push({ name: item.name, price: item.price, quantity: item.qty || 1, img: item.img || "" });
@@ -454,10 +462,7 @@ $(document).ready(function () {
   $(document).on("click", ".decr-item", function () {
     const idx = $(this).closest("[data-idx]").data("idx");
     if (cart.items[idx].quantity > 1) cart.items[idx].quantity--;
-    else {
-      // remove if 1 -> 0
-      cart.items.splice(idx, 1);
-    }
+    else cart.items.splice(idx, 1);
     recalcCart();
     renderCart();
   });
@@ -483,7 +488,6 @@ $(document).ready(function () {
     $("#appliedPromoCode").text(code);
     $("#appliedPromoPercent").text(percent);
     $("#appliedPromo").show();
-    // reflect in cart page too
     $("#appliedPromoCart").show();
     $("#appliedPromoCodeCart").text(code);
     $("#appliedPromoPercentCart").text(percent);
@@ -569,27 +573,61 @@ $(document).ready(function () {
   }
 
   function formatRupiah(n) {
-    if (n === 0) return "Rp0";
+    if (!n && n !== 0) return "Rp0";
     return "Rp" + n.toLocaleString("id-ID");
   }
 
-  // Init demo products into cart (optional) - keep empty initial for realistic behavior
-  // Example: addToCart({name:"Bouquet", price:47000, qty:1, img:"assets/1.-Buket-Uang.webp"});
+  // PROCESS PAYMENT -> show order detail
+  $("#processPaymentBtn").click(function () {
+    // simulate processing: build order summary from cart
+    if (cart.items.length === 0) {
+      alert("Keranjang kosong — tambahkan produk dulu.");
+      return;
+    }
+    // create order detail HTML
+    let html = '';
+    cart.items.forEach(it => {
+      html += `
+        <div class="flex justify-between items-center">
+          <div>
+            <div class="font-semibold">${it.name}</div>
+            <div class="text-sm text-white/80">Qty: ${it.quantity} × Rp${(it.price).toLocaleString('id-ID')}</div>
+          </div>
+          <div class="font-semibold">${formatRupiah(it.price * it.quantity)}</div>
+        </div>
+        <hr class="my-2 border-white/10">
+      `;
+    });
+    if (appliedPromo) {
+      html += `<div class="text-sm">Promo: ${appliedPromo.code} — ${appliedPromo.percent}%</div>`;
+    }
+    $("#orderSummary").html(html);
+    $("#orderVANumber").text($("#vaNumber").text());
+    $("#orderTotal").text(formatRupiah(calculateTotal()));
+    $("#orderStatusText").text("Pembayaran berhasil (Demo)");
+    showPage("#orderDetailPage");
+  });
 
-  // Start page
+  // Back to home from order detail (clear cart)
+  $("#orderBackHome").click(function () {
+    // clear cart (demo)
+    cart.items = [];
+    cart.subtotal = 0;
+    appliedPromo = null;
+    renderCart();
+    showPage("#dashboardPage");
+  });
+
+  // Back / cancel on payment page
+  $("#backHomeFromPayment").click(function () {
+    showPage("#dashboardPage");
+  });
+
+  // init
   renderCart();
   showPage("#dashboardPage");
 });
 </script>
-<!-- WATERMARK DEMO -->
-<div id="watermarkDemo" 
-     class="fixed inset-0 flex items-center justify-center select-none pointer-events-none z-[9999]"
-     style="opacity:0.12;">
-  <h1 class="text-[80px] md:text-[120px] font-extrabold text-white tracking-widest rotate-[-25deg]">
-    DEMO
-  </h1>
-</div>
-
 
 </body>
 </html>

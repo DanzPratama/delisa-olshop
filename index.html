@@ -65,7 +65,7 @@ p {
     border-radius: 50px;
     background: linear-gradient(90deg, #00f5a0, #00d9f5);
     box-shadow: 0 0 20px #00f5a0, 0 0 40px #00d9f5;
-    transition: width 0.3s ease;
+    transition: width 0.5s ease;
 }
 
 .percent {
@@ -94,8 +94,7 @@ p {
 
 <div class="container">
     <h1>🚀 Sedang Mendeploy Sistem...</h1>
-    <p>Website sedang dalam proses update.<br>
-    Estimasi selesai sekitar <b>16.00 WIB</b></p>
+    <p>Estimasi selesai sekitar <b>16.00 WIB</b></p>
 
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
@@ -106,7 +105,7 @@ p {
 </div>
 
 <div class="footer">
-    © 2026 - Mohon tunggu sebentar ya 🙏
+    © 2026 - Mohon tunggu sebentar 🙏
 </div>
 
 <script>
@@ -114,41 +113,41 @@ const progressBar = document.getElementById("progressBar");
 const percentText = document.getElementById("percent");
 const countdownText = document.getElementById("countdown");
 
-let progress = 0;
-
 function updateProgress() {
-    if(progress < 100){
-        progress += Math.random() * 3;
-        if(progress > 100) progress = 100;
-        progressBar.style.width = progress + "%";
-        percentText.innerText = Math.floor(progress) + "%";
-    }
-}
-
-setInterval(updateProgress, 200);
-
-// Countdown ke jam 16:00
-function updateCountdown() {
     const now = new Date();
-    const target = new Date();
-    target.setHours(16,0,0,0);
+    const start = new Date();
+    start.setHours(0,0,0,0); // mulai hitung dari jam 00:00
 
-    if(now > target){
-        countdownText.innerText = "Deployment hampir selesai...";
+    const target = new Date();
+    target.setHours(16,0,0,0); // selesai jam 16:00
+
+    if (now >= target) {
+        progressBar.style.width = "100%";
+        percentText.innerText = "100%";
+        countdownText.innerText = "Deployment selesai 🎉";
         return;
     }
+
+    const totalDuration = target - start;
+    const elapsed = now - start;
+
+    let percent = (elapsed / totalDuration) * 100;
+    if (percent < 0) percent = 0;
+
+    progressBar.style.width = percent + "%";
+    percentText.innerText = Math.floor(percent) + "%";
 
     const diff = target - now;
     const hours = Math.floor(diff / (1000*60*60));
     const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
     const seconds = Math.floor((diff % (1000*60)) / 1000);
 
-    countdownText.innerText = 
+    countdownText.innerText =
         `Sisa waktu: ${hours} jam ${minutes} menit ${seconds} detik`;
 }
 
-setInterval(updateCountdown, 1000);
-updateCountdown();
+setInterval(updateProgress, 1000);
+updateProgress();
 </script>
 
 </body>

@@ -6,6 +6,15 @@
   <title>Delisa Bouquet</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.animate-scaleIn {
+  animation: scaleIn 0.2s ease;
+}
+</style>
 </head>
 <body class="bg-red-600 text-white font-sans">
 
@@ -21,29 +30,50 @@
 
   <div>
     <h2 class="text-lg font-semibold">Featured Bouquets</h2>
-    <div class="flex overflow-x-auto gap-4 mt-3 pb-2">
-      <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2 featured-item cursor-pointer"
-           data-name="Buket Boneka" data-price="65000" data-img="assets/4.-Buket-Boneka.webp" data-desc="Buket boneka lucu, cocok untuk hadiah.">
-        <img src="assets/4.-Buket-Boneka.webp" alt="Buket Boneka" class="rounded-lg mx-auto w-full h-auto" />
-        <div class="mt-1 text-sm font-medium">Boneka</div>
-        <div class="text-white text-xs">Rp65.000</div>
-      </div>
+  <div class="grid grid-cols-1 gap-4 mt-3">
 
-      <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2 featured-item cursor-pointer"
-           data-name="Buket Permen" data-price="85000" data-img="assets/2.-Buket-Permen-dan-Cokelat.webp" data-desc="Buket permen & cokelat manis.">
-        <img src="assets/2.-Buket-Permen-dan-Cokelat.webp" alt="Buket Permen" class="rounded-lg mx-auto w-full h-auto" />
-        <div class="mt-1 text-sm font-medium">Permen</div>
-        <div class="text-white text-xs">Rp85.000</div>
-      </div>
+  <!-- Card 1 -->
+  <div class="flex items-center bg-white/10 rounded-xl p-3 cursor-pointer hover:bg-white/20 transition featured-item"
+       data-name="Buket Boneka" data-price="65000" data-img="assets/4.-Buket-Boneka.webp" data-desc="Buket boneka lucu, cocok untuk hadiah.">
+    
+    <img src="assets/4.-Buket-Boneka.webp" alt="Buket Boneka"
+         class="w-20 h-20 object-cover rounded-lg" />
 
-      <div class="flex-shrink-0 w-36 text-center bg-white/10 rounded-lg p-2 featured-item cursor-pointer"
-           data-name="Buket Uang" data-price="105000" data-img="assets/1.-Buket-Uang.webp" data-desc="Buket isi uang, elegan untuk ulang tahun.">
-        <img src="assets/1.-Buket-Uang.webp" alt="Buket Uang" class="rounded-lg mx-auto w-full h-auto" />
-        <div class="mt-1 text-sm font-medium">Uang</div>
-        <div class="text-white text-xs">Rp105.000</div>
-      </div>
+    <div class="ml-4 flex-1">
+      <div class="text-sm font-semibold">Buket Boneka</div>
+      <div class="text-xs text-gray-200">Buket boneka lucu, cocok untuk hadiah.</div>
+      <div class="text-red-300 font-bold mt-1">Rp65.000</div>
     </div>
   </div>
+
+  <!-- Card 2 -->
+  <div class="flex items-center bg-white/10 rounded-xl p-3 cursor-pointer hover:bg-white/20 transition featured-item"
+       data-name="Buket Permen" data-price="85000" data-img="assets/2.-Buket-Permen-dan-Cokelat.webp" data-desc="Buket permen & cokelat manis.">
+    
+    <img src="assets/2.-Buket-Permen-dan-Cokelat.webp" alt="Buket Permen"
+         class="w-20 h-20 object-cover rounded-lg" />
+
+    <div class="ml-4 flex-1">
+      <div class="text-sm font-semibold">Buket Permen</div>
+      <div class="text-xs text-gray-200">Buket permen & cokelat manis.</div>
+      <div class="text-red-300 font-bold mt-1">Rp85.000</div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="flex items-center bg-white/10 rounded-xl p-3 cursor-pointer hover:bg-white/20 transition featured-item"
+       data-name="Buket Uang" data-price="105000" data-img="assets/1.-Buket-Uang.webp" data-desc="Buket isi uang, elegan untuk ulang tahun.">
+    
+    <img src="assets/1.-Buket-Uang.webp" alt="Buket Uang"
+         class="w-20 h-20 object-cover rounded-lg" />
+
+    <div class="ml-4 flex-1">
+      <div class="text-sm font-semibold">Buket Uang</div>
+      <div class="text-xs text-gray-200">Buket isi uang, elegan untuk ulang tahun.</div>
+      <div class="text-red-300 font-bold mt-1">Rp105.000</div>
+    </div>
+  </div>
+
 </div>
 
 <!-- PRODUK -->
@@ -333,17 +363,32 @@
 
 <!-- WATERMARK DEMO -->
 <!-- Modal -->
-<div id="modalForm" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
-  <div class="bg-white rounded-xl p-6 w-96 shadow-lg">
-    <h2 id="modalTitle" class="text-lg font-semibold mb-4">Judul</h2>
+<!-- Modal -->
+<div id="modalForm" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+  <div class="bg-gradient-to-br from-red-600 to-red-800 text-white rounded-2xl p-6 w-96 shadow-2xl animate-scaleIn">
     
-    <input id="modalInput" type="text" class="w-full border rounded-lg p-2 mb-4" placeholder="Masukkan data...">
+    <h2 id="modalTitle" class="text-xl font-bold mb-4"></h2>
+    
+    <input id="modalInput" type="text"
+      class="w-full p-3 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-yellow-300 mb-4"
+      placeholder="Masukkan data...">
     
     <div class="flex justify-end gap-2">
-      <button id="btnBatal" class="px-4 py-2 bg-gray-300 rounded-lg">Batal</button>
-      <button id="btnSimpan" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Simpan</button>
+      <button id="btnBatal"
+        class="px-4 py-2 bg-gray-300 text-black rounded-lg hover:bg-gray-400">
+        Batal
+      </button>
+      <button id="btnSimpan"
+        class="px-4 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-300 font-semibold">
+        Simpan
+      </button>
     </div>
   </div>
+</div>
+
+<!-- Toast Notifikasi -->
+<div id="toastSuccess"
+  class="fixed top-5 right-5 bg-green-500 text-white px-5 py-3 rounded-lg shadow-lg hidden">
 </div>
 
 <!-- SCRIPT -->
@@ -546,22 +591,33 @@ $(document).ready(function () {
   $("#modalForm").removeClass("hidden").addClass("flex");
 }
 
-// tombol-tombol
+// tombol
 $("#btnProfil").click(() => bukaModal("Ubah Profil", "Masukkan nama profil..."));
 $("#btnUbahAlamat").click(() => bukaModal("Ubah Alamat", "Masukkan alamat baru..."));
 $("#btnUbahPassword").click(() => bukaModal("Ubah Password", "Masukkan password baru..."));
 $("#btnUbahNomor").click(() => bukaModal("Ubah Nomor", "Masukkan nomor baru..."));
 
-// tombol batal
+// batal
 $("#btnBatal").click(() => {
   $("#modalForm").addClass("hidden").removeClass("flex");
 });
 
-// tombol simpan (dummy aja)
+// simpan (dummy tapi realistis)
 $("#btnSimpan").click(() => {
-  let value = $("#modalInput").val();
-  alert("Data disimpan (dummy): " + value);
+  let value = $("#modalInput").val() || "ini";
+
   $("#modalForm").addClass("hidden").removeClass("flex");
+
+  // tampilkan toast
+  $("#toastSuccess")
+    .text(`"${value}" berhasil disimpan`)
+    .removeClass("hidden")
+    .fadeIn();
+
+  // hilang otomatis
+  setTimeout(() => {
+    $("#toastSuccess").fadeOut();
+  }, 2000);
 });
 
   // Simple search — filter produk by name

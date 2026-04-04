@@ -332,7 +332,19 @@
 </div>
 
 <!-- WATERMARK DEMO -->
-
+<!-- Modal -->
+<div id="modalForm" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl p-6 w-96 shadow-lg">
+    <h2 id="modalTitle" class="text-lg font-semibold mb-4">Judul</h2>
+    
+    <input id="modalInput" type="text" class="w-full border rounded-lg p-2 mb-4" placeholder="Masukkan data...">
+    
+    <div class="flex justify-end gap-2">
+      <button id="btnBatal" class="px-4 py-2 bg-gray-300 rounded-lg">Batal</button>
+      <button id="btnSimpan" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Simpan</button>
+    </div>
+  </div>
+</div>
 
 <!-- SCRIPT -->
 <script>
@@ -527,10 +539,30 @@ $(document).ready(function () {
   });
 
   // Pengaturan placeholders
-  $("#btnProfil").click(() => alert("Fungsi Pengaturan Profil belum diimplementasikan (frontend placeholder)."));
-  $("#btnUbahAlamat").click(() => alert("Fungsi Ubah Alamat belum diimplementasikan (frontend placeholder)."));
-  $("#btnUbahPassword").click(() => alert("Fungsi Ubah Password belum diimplementasikan (frontend placeholder)."));
-  $("#btnUbahNomor").click(() => alert("Fungsi Ubah Nomor belum diimplementasikan (frontend placeholder)."));
+ function bukaModal(judul, placeholder) {
+  $("#modalTitle").text(judul);
+  $("#modalInput").attr("placeholder", placeholder);
+  $("#modalInput").val("");
+  $("#modalForm").removeClass("hidden").addClass("flex");
+}
+
+// tombol-tombol
+$("#btnProfil").click(() => bukaModal("Ubah Profil", "Masukkan nama profil..."));
+$("#btnUbahAlamat").click(() => bukaModal("Ubah Alamat", "Masukkan alamat baru..."));
+$("#btnUbahPassword").click(() => bukaModal("Ubah Password", "Masukkan password baru..."));
+$("#btnUbahNomor").click(() => bukaModal("Ubah Nomor", "Masukkan nomor baru..."));
+
+// tombol batal
+$("#btnBatal").click(() => {
+  $("#modalForm").addClass("hidden").removeClass("flex");
+});
+
+// tombol simpan (dummy aja)
+$("#btnSimpan").click(() => {
+  let value = $("#modalInput").val();
+  alert("Data disimpan (dummy): " + value);
+  $("#modalForm").addClass("hidden").removeClass("flex");
+});
 
   // Simple search — filter produk by name
   $("#searchProduk").on("input", function () {
